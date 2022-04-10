@@ -1,0 +1,44 @@
+﻿<Window x:Class="МСБ.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:МСБ"
+        mc:Ignorable="d"
+        Title="Window3" Height="450" Width="800"
+        WindowState="Maximized">
+    <Grid>
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Данные об организации">
+                <MenuItem Header="Реквизиты организации" Click="MenuItem_Click" />
+                <MenuItem Header="Справочники" >
+                    <MenuItem Header="Сотрудники">
+                        <MenuItem Header="Удалить" Click="MenuItem_Click_1" />
+                        <MenuItem Header="Добавить"  Click="MenuItem_Click_2"/>
+                    </MenuItem>
+                    <MenuItem Header="Обороты" />
+                    <MenuItem Header="Контрагенты" />
+                </MenuItem>
+                <Separator />
+
+            </MenuItem>
+            <MenuItem Header="Отчеты" >
+                <MenuItem Header="Сотрудники">
+                    <MenuItem Header="Налоги с ФОТ" Click="Button_Click"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="View" />
+        </Menu>
+        <Label x:Name="label" Height="161" VerticalAlignment="Bottom"/>
+        <Button Content="Ok" Visibility="Hidden" Grid.Row="2" x:Name="button" Click="button_Click_1"/>
+        <TextBox x:Name="text" Grid.Row="1" Text="введите id" Visibility="Hidden"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+    </Grid>
+
+</Window>
